@@ -13,7 +13,7 @@ class Campaigns extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'campaign_id', 'campaign_name', 'target_url', 'bid_cpm', 'capping', 'daily_budget', 'status', 'deleted'
+        'user_id', 'campaign_id', 'campaign_name', 'target_url', 'bid_cpm', 'capping', 'daily_budget', 'total_budget', 'status', 'deleted'
     ];
 
     /**
