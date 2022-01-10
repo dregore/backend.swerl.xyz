@@ -28,4 +28,9 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->delete('campaigns/{id}', ['uses' => 'CampaignController@delete']);
     // Update campaign
     $router->put('campaigns/{id}', ['uses' => 'CampaignController@update']);
+
+    // Create finance record for the first time
+    $router->post('finance', ['uses' => 'FinanceController@create']);
+    // Update finance record
+    $router->put('finance', ['uses' => 'FinanceController@update']);
 });
