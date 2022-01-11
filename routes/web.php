@@ -29,8 +29,12 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     // Update campaign
     $router->put('campaigns/{id}', ['uses' => 'CampaignController@update']);
 
+    // Get all users finance
+    $router->get('finance',  ['uses' => 'FinanceController@showAll']);
+    // Get specific user finance
+    $router->get('finance/{id}', ['uses' => 'FinanceController@showOne']);
     // Create finance record for the first time
     $router->post('finance', ['uses' => 'FinanceController@create']);
     // Update finance record
-    $router->put('finance', ['uses' => 'FinanceController@update']);
+    $router->put('finance/{id}', ['uses' => 'FinanceController@update']);
 });
